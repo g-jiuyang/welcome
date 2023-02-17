@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲完蛋了</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/campaign-style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body class="font-sans overflow-x-hidden bg-311654">
+
+    <!-- header -->
+    <div class="min-h-full">
+        <nav id="navH" class="bg-opacity-0 w-full fixed top-0 z-20">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center h-20">
+                    <div class="flex items-center justify-between w-full">
+                        <!-- 20220629 -->
+                        <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
+                            <a href="#">
+                                <img src="images/logo.png">
+                            </a>
+                        </div>
+                        <!-- pc and mobile menu -->
+                        <div class="flex items-center flex-wrap justify-end">
+                            <ul class="items-center text-base text-white font-bold hidden lg:flex">
+                                <!-- pc -->
+                                <li class="menu-list">
+                                    <a href="#about" class="block w-11/12 mx-auto">
+                                        <img class="h-10" src="images/btn-menu1.png">
+                                    </a>
+                                </li>
+                                <li class="menu-list">
+                                    <a href="#register" class="block w-11/12 mx-auto">
+                                        <img class="h-10" src="images/btn-menu2.png">
+                                    </a>
+                                </li>
+                                <li class="menu-list">
+                                    <a href="#event" class="block w-11/12 mx-auto">
+                                        <img class="h-10" src="images/btn-menu3.png">
+                                    </a>
+                                </li>
+                                <li class="menu-list">
+                                    <a href="https://buggedgame.io/" class="block w-11/12 mx-auto">
+                                        <img class="h-10" src="images/btn-menu4.png">
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center sm:flex lg:hidden">
+                                <!-- mobile -->
+                                <li class="flex justify-center items-center w-9 h-9 mx-1 btn-hamburger">
+                                    <a href="javascript:void(0)" class="block">
+                                        <img src="images/icon-menu.svg">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-9 h-9 mx-1 mr-0 hidden">
+                                    <a href="javascript:void(0)">
+                                        <img src="images/personal.svg">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- <ul class="w-full hidden lg:flex justify-end items-center text-white absolute top-20 right-16"> -->
+        <ul class="web-lang">
+            <li class="relative font-bold">
+                <!-- <a href="javascript:void(0)" class="mx-5 flex items-center space-x-1 btn-language">
+                    <img src="images/icon-language.svg">
+                    <img src="images/icon-arrow-bottom.svg" class="icon-arrow-bottom">
+                </a> -->
+                <ul
+                    class="hidden w-40 py-6 text-center font-bold mt-3 text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-34076f text-white border-color-54357c border border-solid language-menu">
+                    <li>
+                        <a href="javascript:void(0)" class="block p-2">繁體中文</a>
+                    </li>
+                    <li class="disabled">
+                        <a href="javascript:void(0)" class="block p-2">简体中文</a>
+                    </li>
+                    <li class="disabled">
+                        <a href="javascript:void(0)" class="block p-2">English</a>
+                    </li>
+                    <li class="disabled">
+                        <a href="javascript:void(0)" class="block p-2">한국어</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="w-10 mr-4">
+                <a href="https://bean.fun/Z0CRi" target="_blank"><img src="images/icon-twitter.png"></a>
+            </li>
+            <li class="w-10">
+                <a href="https://bean.fun/qeUgJ" target="_blank"><img src="images/icon-discord.png"></a>
+            </li>
+        </ul>
+
+        <!-- mobile menu -->
+        <div class="hidden w-full h-full text-lg fixed top-0 left-0 z-40 bg-1f0640 m-menu lg:hidden">
+            <ul class="text-center relative font-bold h-full top-24 color-efefef">
+                <li class="py-4">
+                    <a href="#about" id="aa1" class="block px-3 w-11/12 mx-auto">
+                        <img class="h-11 mx-auto" src="images/btn-menu1.png">
+                    </a>
+                </li>
+                <li class="py-4">
+                    <a href="#register" id="aa2" class="block px-3 w-11/12 mx-auto">
+                        <img class="h-11 mx-auto" src="images/btn-menu2.png">
+                    </a>
+                </li>
+                <li class="py-4">
+                    <a href="#event" id="aa3" class="block px-3 w-11/12 mx-auto">
+                        <img class="h-11 mx-auto" src="images/btn-menu3.png">
+                    </a>
+                </li>
+                <li class="py-4">
+                    <a href="https://buggedgame.io/" class="block px-3 w-11/12 mx-auto">
+                        <img class="h-11 mx-auto" src="images/btn-menu4.png">
+                    </a>
+                </li>
+                <li class="py-4 absolute bottom-28 left-1/2 transform -translate-x-1/2">
+                    <div class="w-10 mr-1 inline-block"><a href="https://twitter.com/GASH_tw" target="_blank"><img
+                                src="images/icon-twitter.png"></a></div>
+                    <div class="w-10 inline-block"><a href="https://discord.gg/gash-invitelink" target="_blank"><img
+                                src="images/icon-discord.png"></a></div>
+                </li>
+                <!-- <li class="py-4 absolute bottom-28 left-1/2 transform -translate-x-1/2">
+                    <a href="javascript:void(0)" class="block space-x-1  btn-m-language">
+                        <img src="images/icon-language.svg" class="inline-block align-middle">
+                        <span class="inline-block align-middle text-sm">繁體中文</span>
+                        <img src="images/icon-arrow-top.svg" class="inline-block align-middle">
+                    </a>
+                    <ul
+                        class="hidden w-40 py-6 text-sm font-bold text-center absolute bottom-4 left-1/2 transform -translate-x-1/2 rounded-xl border bg-1f0640 border-solid border-color-54357c m-language-menu">
+                        <li>
+                            <a href="javascript:void(0)" class="block p-2">繁體中文</a>
+                        </li>
+                        <li class="disabled">
+                            <a href="javascript:void(0)" class="block p-2">简体中文</a>
+                        </li>
+                        <li class="disabled">
+                            <a href="javascript:void(0)" class="block p-2">English</a>
+                        </li>
+                        <li class="disabled">
+                            <a href="javascript:void(0)" class="block p-2">한국어</a>
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+            <button class="absolute top-6 right-6 btn-close">
+                <img src="images/icon-close.svg">
+            </button>
+        </div>
+    </div>
+
+    <!-- 主視覺 -->
+    <div class="pt-20 bg-cover hidden lg:bg-cover lg:bg-top md:block md:bg-cover bg-no-repeat kv-height relative"
+        style="background-image: url(images/kv.gif);">
+        <img class="absolute left-1/2 transform -translate-x-1/2" src="images/logo_ch.png">
+    </div>
+    <div class="pt-20 block md:hidden bg-contain bg-no-repeat bg-top-center kv-mobile"
+        style="height: 150vw; background-image: url(images/kv-m.gif);">
+        <img class="absolute left-1/2 transform -translate-x-1/2" src="images/logo_ch.png">
+    </div>
+
+    <!-- 內容 -->
+    <div id="about" class="-mt-60 sm:-mt-96 md:-mt-60 md:pt-20 overflow-hidden">
+        <!-- 關於遊戲 -->
+        <div class="bg-no-repeat bg-cover pb-28" style="background-image: url(images/bg.png);">
+            <div data-aos="fade-up" data-aos-once="false" class="max-w-5xl px-4 md:px-8 mx-auto text-white">
+                <!-- 大標 -->
+                <div class="mb-6 mx-auto w-11/12 md:w-2/3 lg:w-1/2">
+                    <img class="max-w-full hidden md:inline" src="images/title01.png">
+                    <img class="max-w-full md:hidden" src="images/title01-m.png">
+                </div>
+                <!-- 副標 -->
+                <div class="md:text-center lg:text-lg text-white mb-12 leading-6">
+                    不同於一般伺服器，我們將你的遊戲成果保存在區塊鏈上<br class="hidden md:inline">完成考驗，獲得期間限定獎勵：
+                </div>
+                <!-- 三張圖 -->
+                <div class="w-full overflow-hidden">
+                    <div
+                        class="flex flex-wrap md:flex-nowrap gap-8 items-top justify-center lg:justify-between w-full lg:mx-auto">
+                        <div data-aos="fade-up" data-aos-once="false" data-aos-delay="100" class="text-center w-64">
+                            <img class="w-24 mx-auto -mb-10" src="images/item01-title.png">
+                            <div class="flex justify-center items-center mx-auto relative bg-contain bg-no-repeat"
+                                style="background-image: url(images/item01-bg.png);">
+                                <img src="images/item01.png">
+                            </div>
+                            <div class="-mt-10 mb-1">
+                                <img class="mx-auto" src="images/item01-subtitle.png">
+                            </div>
+                            <div class="text-base font-normal color-efefef mx-auto text-left">
+                                將有意義的遊戲足跡（資產、成就）鑄造並儲存在錢包中，成為你元宇宙中的身份。
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-once="false" data-aos-delay="200" class="text-center w-64">
+                            <img class="w-24 mx-auto -mb-10" src="images/item02-title.png">
+                            <div class="flex justify-center items-center mx-auto relative bg-contain bg-no-repeat"
+                                style="background-image: url(images/item02-bg.png);">
+                                <img src="images/item02.png">
+                            </div>
+                            <div class="-mt-10 mb-1">
+                                <img class="mx-auto" src="images/item02-subtitle.png">
+                            </div>
+                            <div class="text-base font-normal color-efefef mx-auto text-left">
+                                獲得的資源（代幣）在遊戲外也可以被使用、交換，延續資產的價值。
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-once="false" data-aos-delay="300" class="text-center w-64">
+                            <img class="w-24 mx-auto -mb-10" src="images/item03-title.png">
+                            <div class="flex justify-center items-center mx-auto relative bg-contain bg-no-repeat"
+                                style="background-image: url(images/item03-bg.png);">
+                                <img src="images/item03.png">
+                            </div>
+                            <div class="-mt-10 mb-1">
+                                <img class="mx-auto" src="images/item03-subtitle.png">
+                            </div>
+                            <div class="text-base font-normal color-efefef mx-auto text-left">
+                                獲得的資源（代幣）在遊戲外也可以被使用、交換，延續資產的價值。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 補充 -->
+                <div data-aos="fade-up" data-aos-once="false"
+                    class="text-center mt-20 p-12 rounded-3xl bg-cover bg-right"
+                    style="background-image: url(images/card-bg.png);">
+                    <p class="text-xl">未來，根據你的數位身份與資產，可以獲得更多的福利與特權。</p>
+                    <img class="my-4" src="images/card-title.png">
+                    <img class="w-3/5 mx-auto" src="images/card-subtitle.png">
+                    <img class="ani-float w-16 mx-auto -mt-4 mb-2" src="images/card-arrow.png">
+                    <button
+                        class="ani-bounce border-2 py-3 px-14 text-lg bg-white bg-opacity-0 hover:bg-opacity-10 transition-colors duration-300">
+                        我要報名
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bg-no-repeat bg-cover bg-center" style="background-image: url(images/bg2.png);">
+            <!-- 新人報到流程 -->
+            <div id="register" class="max-w-5xl px-4 pt-10 md:px-8 lg:pt-20 lg:px-0 mb-8 mx-auto text-white">
+                <!-- 標題 -->
+                <div data-aos="fade-up">
+                    <div class="w-80 mx-auto mb-8">
+                        <img src="images/register.png" class="mx-auto">
+                    </div>
+                    <!-- <div class="text-center text-lg text-white mb-16">
+                        <div>不同於一般課金遊戲，《遊戲完蛋了》擁有指定伺服器可以讓你邊玩邊賺！</div>
+                    </div> -->
+                </div>
+                <!-- 第 1, 2 項 -->
+                <div class="relative">
+                    <div class="block md:flex items-top justify-between md:space-x-6">
+                        <div data-aos="flip-up" data-aos-delay="300" data-aos-once="false"
+                            class="w-full h-auto lg:h-64 flex p-6 lg:p-10 mb-4 lg:mb-6 text-left text-white md:w-1/2 bg-34076f rounded-2xl">
+                            <div class="flex-initial"><img src="images/register1.png"></div>
+                            <div class="flex-initial pl-8">
+                                <img class="h-5 mb-6" src="images/register1-title.png">
+                                <div class="text-base leading-8">錢包就像是你在公司的薪轉戶，沒有他，將無法透過任務獲得BUG獎勵，紀錄也無法被保存在遊戲外:(</div>
+                            </div>
+                        </div>
+                        <div data-aos="flip-up" data-aos-delay="350" data-aos-once="false"
+                            class="w-full h-auto lg:h-64 p-6 flex lg:p-10 lg:mt-40 mb-4 lg:mb-0 text-left text-white md:w-1/2 bg-6319c2 rounded-2xl relative">
+                            <div class="flex-initial"><img src="images/register2.png"></div>
+                            <div class="flex-initial pl-8">
+                                <img class="h-5 mb-6" src="images/register2-title.png">
+                                <div class="text-base leading-8">Pass就像是你在公司的員工證。擁有他，你才具備了正式資格！透過完成任務得到BUG獎勵。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 人物 -->
+                    <div data-aos="fade-right" data-aos-delay="100" data-aos-once="false"
+                        class="hidden lg:block absolute top-9 -left-44 w-96">
+                        <img src="images/personal-2.png">
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="200" data-aos-once="false"
+                        class="hidden lg:block absolute top-72 -right-24 w-96">
+                        <img src="images/personal-1.png">
+                    </div>
+                </div>
+                <!-- 第 3, 4 項 -->
+                <div class="block md:flex items-top justify-between md:space-x-6 relative">
+                    <div data-aos="flip-up" data-aos-delay="400" data-aos-once="false"
+                        class="w-full h-auto lg:h-64 flex p-6 mb-4 lg:p-10 lg:mb-6 text-left text-white md:w-1/2 bg-6319c2 rounded-2xl relative">
+                        <div class="flex-initial"><img src="images/register3.png"></div>
+                        <div class="flex-initial pl-8">
+                            <img class="h-5 mb-6" src="images/register3-title.png">
+                            <div class="mb-12 text-base leading-6">在公司裡，突破次元壁的重要步驟，由此開啟進入像素世界的大門！</div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-up" data-aos-delay="450" data-aos-once="false"
+                        class="w-full h-auto lg:h-64 flex p-6 lg:p-10 lg:mt-40 mb-5 text-left text-white md:w-1/2 bg-34076f rounded-2xl">
+                        <div class="flex-initial"><img src="images/register4.png"></div>
+                        <div class="flex-initial pl-8">
+                            <img class="h-5 mb-6" src="images/register4-title.png">
+                            <div class="mb-12 text-base leading-6">每種角色的專長和技能不同，透過配戴合適的裝備，提升打怪的效率以獲得更多的獎勵！</div>
+                        </div>
+                    </div>
+                    <!-- 寶箱 -->
+                    <div data-aos="fade-left" data-aos-delay="500" data-aos-once="false"
+                        class="hidden lg:block absolute top-44 -left-28 w-96">
+                        <img src="images/treasure.png">
+                    </div>
+                </div>
+                <!-- 查看教學 -->
+                <div class="text-center mt-12">
+                    <button data-aos="fade-up" data-aos-once="false"
+                        class="border-2 py-3 px-14 text-lg bg-white bg-opacity-0 hover:bg-opacity-10 transition-colors duration-300">
+                        查看教學
+                    </button>
+                </div>
+            </div>
+
+            <!-- 活動辦法 -->
+            <div id="event" class="max-w-4xl pt-20 px-4 md:px-8 lg:px-0 mb-32 mx-auto text-white">
+                <!-- 標題 -->
+                <div data-aos="fade-up" data-aos-once="false">
+                    <div class="w-80 mx-auto mb-8">
+                        <img src="images/event.png" class="mx-auto">
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-once="false" class="mb-10 leading-7">
+                    <h6 class="text-center text-xl font-bold mb-5">競賽規則</h6>
+                    <p>◎情境 1：購買綠色商品，獲得 1 次抽獎機會消費者於電商綠色商品專區購買綠色商品，結帳後進入活動頁面，點選是否符合資格(1、2 擇一即可)：</p>
+                    <p>(1)符合─取貨地址為桃園市轄內，</p>
+                    <p>(2)符合─購買人戶籍地址為桃園市(若中獎須於領獎時提出身分證明)，不符合或不參加抽獎者則離開活動頁面。符合者填寫電商網頁之抽獎資訊，並同意個資蒐集聲明（詳見活動網頁附件二），即可參加抽獎，獲得
+                        1 次抽獎機會，如中獎需於領獎期限內依規定領獎，逾期視同放棄。</p>
+                </div>
+                <div data-aos="fade-up" data-aos-once="false" class="mb-10 leading-7">
+                    <h6 class="text-center text-xl font-bold mb-5">競賽規則</h6>
+                    <p>◎情境 1：購買綠色商品，獲得 1 次抽獎機會消費者於電商綠色商品專區購買綠色商品，結帳後進入活動頁面，點選是否符合資格(1、2 擇一即可)：</p>
+                    <p>(1)符合─取貨地址為桃園市轄內，</p>
+                    <p>(2)符合─購買人戶籍地址為桃園市(若中獎須於領獎時提出身分證明)，不符合或不參加抽獎者則離開活動頁面。符合者填寫電商網頁之抽獎資訊，並同意個資蒐集聲明（詳見活動網頁附件二），即可參加抽獎，獲得
+                        1 次抽獎機會，如中獎需於領獎期限內依規定領獎，逾期視同放棄。</p>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="max-w-7xl mx-auto mt-28 px-5 text-white color-898989">
+                <div class="py-7 text-sm text-center text-white opacity-80">© 2022 GASH POINT Co., Ltd. All right
+                    reserved</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+<script>
+
+    //web btn language dropdown
+    $(".btn-language").click(function () {
+        $(".language-menu").delay().slideToggle();
+    })
+
+    //mobile btn language dropdown
+    $(".btn-m-language").click(function () {
+        $(".m-language-menu").delay().fadeToggle();
+    })
+
+    // mobile menu
+    $('.btn-hamburger').click(function () {
+        $(".m-menu").fadeIn();
+    })
+
+    // mobile menu close btn
+    $(".btn-close").click(function () {
+        $(".m-menu").fadeOut();
+        $(".m-language-menu").hide();
+    })
+
+    // click btn close bg for mobile
+    $("#aa1, #aa2").click(function () {
+        $(".m-menu").fadeOut();
+    })
+
+    // header scroll style
+    window.addEventListener('scroll', function (e) {
+        let y = window.scrollY;
+        let nav = document.querySelector('#navH');
+
+        // 導覽列背景色切換
+        if (y > 50) {
+            nav.classList.add('nav_down')
+        } else {
+            nav.classList.remove('nav_down')
+        }
+
+    })
+
+    //點擊其他地方多語系功能收合
+    $(document).mouseup(function (e) {
+        var container = $(".language-menu, .m-language-menu");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.hide();
+        }
+    });
+
+    var image = new Image()
+    image.onload = function () {
+        //在圖片載入後要進行的操作
+        AOS.init({
+            once: true,
+        });
+    }
+    image.src = 'images/bg2.png', 'images/bg.png', 'images/kv.png', 'images/kv-m.png'
+
+
+</script>
+
+
+</html>

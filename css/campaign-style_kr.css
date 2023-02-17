@@ -1,0 +1,15 @@
+.kv-mobile img {
+  top: 35vw;
+}
+
+@media screen and (min-width: 768px) {
+  .kv-height img {
+    width: 41.5vw;
+    top: 22vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .kv-height img {
+    top: 22vw;
+  }
+}
