@@ -562,6 +562,95 @@ body {
     }
 }
 
+.card-bg {
+    background-image: url(../images/card-bg.png);
+    background-repeat: no-repeat;
+    background-size: 400%;
+    background-position: top right 20%;
+}
+
+.custom-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    >div {
+        max-width: 100%;
+        text-align: left;
+        color: white;
+        border-radius: 16px;
+        padding: 20px 14px;
+        background-color: #34076f;
+        display: flex;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            border-radius: 16px;
+            background-color: #6319c2;
+        }
+
+        >div {
+            &:first-child {
+                max-width: 30%;
+                padding-top: 32px;
+            }
+
+            &:last-child {
+                max-width: 70%;
+                padding-left: 16px;
+            }
+        }
+
+        &:nth-child(2n) {
+            background-color: #6319c2;
+
+            >div {
+                &:first-child {
+                    &:after {
+                        background-color: #34076f;
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            &:after {
+                content: '1';
+            }
+        }
+
+        &:nth-child(2) {
+            &:after {
+                content: '2';
+            }
+        }
+
+        &:nth-child(3) {
+            &:after {
+                content: '3';
+            }
+        }
+
+        &:nth-child(4) {
+            &:after {
+                content: '4';
+            }
+        }
+    }
+}
+
+
 .footer {
     border-color: rgba(white, .3);
 }
@@ -606,49 +695,7 @@ body {
         background-image: url(../images/bg-m.png);
         background-position: top;
     }
-}
 
-@media screen and (min-width: 768px) {
-    .kv-height {
-        height: 650px;
-
-        img {
-            width: 43vw;
-            top: 19vw;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .kv-height {
-        height: 65vw;
-
-        img {
-            top: 18.5vw;
-        }
-    }
-}
-
-
-
-
-
-
-
-@media screen and (min-width: 1024px) {
-    .rounded-40px {
-        border-radius: 40px;
-    }
-}
-
-// 20220609
-@media screen and (min-width: 768px) {
-    .w-469px {
-        width: 469px;
-    }
-}
-
-@media screen and (max-width: 414px) {
     .rounded-40px {
         border-radius: 24px;
     }
@@ -664,5 +711,80 @@ body {
         margin-top: 20px;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .kv-height {
+        height: 650px;
+
+        img {
+            width: 43vw;
+            top: 19vw;
+        }
+    }
+
+    .w-469px {
+        width: 469px;
+    }
+
+    .card-bg {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .custom-card {
+        >div {
+            max-width: calc(50% - 12px);
+            padding: 24px;
+
+            >div {
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    padding-left: 32px;
+                }
+            }
+
+            &:nth-child(2n) {
+                background-color: #34076f;
+                margin-top: 120px;
+
+                &:after {
+                    background-color: #6319c2;
+                }
+            }
+
+            &:nth-child(4n+2),
+            &:nth-child(4n+3) {
+                background-color: #6319c2;
+
+                &:after {
+                    background-color: #34076f;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .kv-height {
+        height: 65vw;
+
+        img {
+            top: 18.5vw;
+        }
+    }
+
+    .rounded-40px {
+        border-radius: 40px;
+    }
+
+    .custom-card {
+        >div {
+            padding: 40px;
+        }
     }
 }

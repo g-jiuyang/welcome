@@ -175,15 +175,15 @@
     <!-- 內容 -->
     <div id="about" class="-mt-60 sm:-mt-96 md:-mt-60 md:pt-20 overflow-hidden">
         <!-- 關於遊戲 -->
-        <div class="bg-no-repeat bg-cover pb-28" style="background-image: url(images/bg.png);">
-            <div data-aos="fade-up" data-aos-once="false" class="max-w-5xl px-4 md:px-8 mx-auto text-white">
+        <div class="bg-no-repeat bg-cover pb-10 md:pb-28" style="background-image: url(images/bg.png);">
+            <div data-aos="fade-up" data-aos-once="false" class="max-w-5xl px-5 md:px-8 mx-auto text-white">
                 <!-- 大標 -->
-                <div class="mb-6 mx-auto w-11/12 md:w-2/3 lg:w-1/2">
+                <div class="mb-6 mx-auto w-5/6 md:w-2/3 lg:w-1/2">
                     <img class="max-w-full hidden md:inline" src="images/title01.png">
                     <img class="max-w-full md:hidden" src="images/title01-m.png">
                 </div>
                 <!-- 副標 -->
-                <div class="md:text-center lg:text-lg text-white mb-12 leading-6">
+                <div class="md:text-center lg:text-lg text-white mb-4 md:mb-12 leading-6">
                     不同於一般伺服器，我們將你的遊戲成果保存在區塊鏈上<br class="hidden md:inline">完成考驗，獲得期間限定獎勵：
                 </div>
                 <!-- 三張圖 -->
@@ -233,14 +233,19 @@
                 </div>
                 <!-- 補充 -->
                 <div data-aos="fade-up" data-aos-once="false"
-                    class="text-center mt-20 p-12 rounded-3xl bg-cover bg-right"
-                    style="background-image: url(images/card-bg.png);">
-                    <p class="text-xl">未來，根據你的數位身份與資產，可以獲得更多的福利與特權。</p>
-                    <img class="my-4" src="images/card-title.png">
-                    <img class="w-3/5 mx-auto" src="images/card-subtitle.png">
+                    class="text-center mt-14 md:mt-20 px-4 py-11 md:p-12 rounded-3xl card-bg">
+                    <p class="text-lg md:text-xl">未來，根據你的數位身份與資產，可以獲得更多的福利與特權。</p>
+                    <div class="hidden md:block">
+                        <img class="my-4" src="images/card-title.png">
+                        <img class="w-3/5 mx-auto" src="images/card-subtitle.png">
+                    </div>
+                    <div class="md:hidden">
+                        <img src="images/card-title_m.png">
+                        <img src="images/card-subtitle_m.png">
+                    </div>
                     <img class="ani-float w-16 mx-auto -mt-4 mb-2" src="images/card-arrow.png">
                     <button
-                        class="ani-bounce border-2 py-3 px-14 text-lg bg-white bg-opacity-0 hover:bg-opacity-10 transition-colors duration-300">
+                        class="ani-bounce border-2 w-5/6 md:w-auto py-3 px-14 text-lg bg-white bg-opacity-0 hover:bg-opacity-10 transition-colors duration-300">
                         我要報名
                     </button>
                 </div>
@@ -250,72 +255,60 @@
 
         <div class="bg-no-repeat bg-cover bg-center" style="background-image: url(images/bg2.png);">
             <!-- 新人報到流程 -->
-            <div id="register" class="max-w-5xl px-4 pt-10 md:px-8 lg:pt-20 lg:px-0 mb-8 mx-auto text-white">
+            <div id="register" class="max-w-5xl px-4 pt-10 md:px-8 lg:pt-20 lg:px-0 mb-8 mx-auto text-white relative">
                 <!-- 標題 -->
-                <div data-aos="fade-up">
-                    <div class="w-80 mx-auto mb-8">
-                        <img src="images/register.png" class="mx-auto">
-                    </div>
-                    <!-- <div class="text-center text-lg text-white mb-16">
-                        <div>不同於一般課金遊戲，《遊戲完蛋了》擁有指定伺服器可以讓你邊玩邊賺！</div>
-                    </div> -->
+                <div data-aos="fade-up" class="w-72 md:w-80 mx-auto mb-8">
+                    <img src="images/register.png" class="mx-auto">
                 </div>
-                <!-- 第 1, 2 項 -->
-                <div class="relative">
-                    <div class="block md:flex items-top justify-between md:space-x-6">
-                        <div data-aos="flip-up" data-aos-delay="300" data-aos-once="false"
-                            class="w-full h-auto lg:h-64 flex p-6 lg:p-10 mb-4 lg:mb-6 text-left text-white md:w-1/2 bg-34076f rounded-2xl">
-                            <div class="flex-initial"><img src="images/register1.png"></div>
-                            <div class="flex-initial pl-8">
-                                <img class="h-5 mb-6" src="images/register1-title.png">
-                                <div class="text-base leading-8">錢包就像是你在公司的薪轉戶，沒有他，將無法透過任務獲得BUG獎勵，紀錄也無法被保存在遊戲外:(</div>
-                            </div>
-                        </div>
-                        <div data-aos="flip-up" data-aos-delay="350" data-aos-once="false"
-                            class="w-full h-auto lg:h-64 p-6 flex lg:p-10 lg:mt-40 mb-4 lg:mb-0 text-left text-white md:w-1/2 bg-6319c2 rounded-2xl relative">
-                            <div class="flex-initial"><img src="images/register2.png"></div>
-                            <div class="flex-initial pl-8">
-                                <img class="h-5 mb-6" src="images/register2-title.png">
-                                <div class="text-base leading-8">Pass就像是你在公司的員工證。擁有他，你才具備了正式資格！透過完成任務得到BUG獎勵。</div>
-                            </div>
+                <!-- 卡片 -->
+                <div class="custom-card">
+                    <div data-aos="flip-up" data-aos-delay="300" data-aos-once="false">
+                        <div><img src="images/register1.png"></div>
+                        <div>
+                            <img class="h-5 mb-4 md:mb-6" src="images/register1-title.png">
+                            <div class="text-base leading-8">錢包就像是你在公司的薪轉戶，沒有他，將無法透過任務獲得BUG獎勵，紀錄也無法被保存在遊戲外:(</div>
                         </div>
                     </div>
+                    <div data-aos="flip-up" data-aos-delay="350" data-aos-once="false">
+                        <div><img src="images/register2.png"></div>
+                        <div>
+                            <img class="h-5 mb-4 md:mb-6" src="images/register2-title.png">
+                            <div class="text-base leading-8">Pass就像是你在公司的員工證。擁有他，你才具備了正式資格！透過完成任務得到BUG獎勵。</div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-up" data-aos-delay="400" data-aos-once="false" class="z-10">
+                        <div><img src="images/register3.png"></div>
+                        <div>
+                            <img class="h-5 mb-4 md:mb-6" src="images/register3-title.png">
+                            <div class="text-base leading-8">在公司裡，突破次元壁的重要步驟，由此開啟進入像素世界的大門！</div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-up" data-aos-delay="450" data-aos-once="false" class="z-10">
+                        <div><img src="images/register4.png"></div>
+                        <div>
+                            <img class="h-5 mb-4 md:mb-6" src="images/register4-title.png">
+                            <div class="text-base leading-8">每種角色的專長和技能不同，透過配戴合適的裝備，提升打怪的效率以獲得更多的獎勵！:(</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute top-0 right-0 bottom-0 left-0">
                     <!-- 人物 -->
                     <div data-aos="fade-right" data-aos-delay="100" data-aos-once="false"
-                        class="hidden lg:block absolute top-9 -left-44 w-96">
+                        class="hidden md:block w-96 absolute top-40 -left-40">
                         <img src="images/personal-2.png">
                     </div>
                     <div data-aos="fade-left" data-aos-delay="200" data-aos-once="false"
-                        class="hidden lg:block absolute top-72 -right-24 w-96">
+                        class="hidden md:block w-96 absolute top-96 -right-24">
                         <img src="images/personal-1.png">
-                    </div>
-                </div>
-                <!-- 第 3, 4 項 -->
-                <div class="block md:flex items-top justify-between md:space-x-6 relative">
-                    <div data-aos="flip-up" data-aos-delay="400" data-aos-once="false"
-                        class="w-full h-auto lg:h-64 flex p-6 mb-4 lg:p-10 lg:mb-6 text-left text-white md:w-1/2 bg-6319c2 rounded-2xl relative">
-                        <div class="flex-initial"><img src="images/register3.png"></div>
-                        <div class="flex-initial pl-8">
-                            <img class="h-5 mb-6" src="images/register3-title.png">
-                            <div class="mb-12 text-base leading-6">在公司裡，突破次元壁的重要步驟，由此開啟進入像素世界的大門！</div>
-                        </div>
-                    </div>
-                    <div data-aos="flip-up" data-aos-delay="450" data-aos-once="false"
-                        class="w-full h-auto lg:h-64 flex p-6 lg:p-10 lg:mt-40 mb-5 text-left text-white md:w-1/2 bg-34076f rounded-2xl">
-                        <div class="flex-initial"><img src="images/register4.png"></div>
-                        <div class="flex-initial pl-8">
-                            <img class="h-5 mb-6" src="images/register4-title.png">
-                            <div class="mb-12 text-base leading-6">每種角色的專長和技能不同，透過配戴合適的裝備，提升打怪的效率以獲得更多的獎勵！</div>
-                        </div>
                     </div>
                     <!-- 寶箱 -->
                     <div data-aos="fade-left" data-aos-delay="500" data-aos-once="false"
-                        class="hidden lg:block absolute top-44 -left-28 w-96">
+                        class="block w-96 absolute z-20 bottom-6 -right-56 md:bottom-32 md:-left-24">
                         <img src="images/treasure.png">
                     </div>
                 </div>
                 <!-- 查看教學 -->
-                <div class="text-center mt-12">
+                <div class="text-center mt-20 md:mt-12">
                     <button data-aos="fade-up" data-aos-once="false"
                         class="border-2 py-3 px-14 text-lg bg-white bg-opacity-0 hover:bg-opacity-10 transition-colors duration-300">
                         查看教學
@@ -326,19 +319,17 @@
             <!-- 活動辦法 -->
             <div id="event" class="max-w-4xl pt-20 px-4 md:px-8 lg:px-0 mb-32 mx-auto text-white">
                 <!-- 標題 -->
-                <div data-aos="fade-up" data-aos-once="false">
-                    <div class="w-80 mx-auto mb-8">
-                        <img src="images/event.png" class="mx-auto">
-                    </div>
+                <div data-aos="fade-up" data-aos-once="false" class="w-72 md:w-80 mx-auto mb-8">
+                    <img src="images/event.png" class="mx-auto">
                 </div>
-                <div data-aos="fade-up" data-aos-once="false" class="mb-10 leading-7">
+                <div data-aos="fade-up" data-aos-once="false" class="mb-12 md:mb-10 leading-7">
                     <h6 class="text-center text-xl font-bold mb-5">競賽規則</h6>
                     <p>◎情境 1：購買綠色商品，獲得 1 次抽獎機會消費者於電商綠色商品專區購買綠色商品，結帳後進入活動頁面，點選是否符合資格(1、2 擇一即可)：</p>
                     <p>(1)符合─取貨地址為桃園市轄內，</p>
                     <p>(2)符合─購買人戶籍地址為桃園市(若中獎須於領獎時提出身分證明)，不符合或不參加抽獎者則離開活動頁面。符合者填寫電商網頁之抽獎資訊，並同意個資蒐集聲明（詳見活動網頁附件二），即可參加抽獎，獲得
                         1 次抽獎機會，如中獎需於領獎期限內依規定領獎，逾期視同放棄。</p>
                 </div>
-                <div data-aos="fade-up" data-aos-once="false" class="mb-10 leading-7">
+                <div data-aos="fade-up" data-aos-once="false" class="mb-12 md:mb-10 leading-7">
                     <h6 class="text-center text-xl font-bold mb-5">競賽規則</h6>
                     <p>◎情境 1：購買綠色商品，獲得 1 次抽獎機會消費者於電商綠色商品專區購買綠色商品，結帳後進入活動頁面，點選是否符合資格(1、2 擇一即可)：</p>
                     <p>(1)符合─取貨地址為桃園市轄內，</p>
@@ -349,7 +340,7 @@
 
             <!-- footer -->
             <div class="max-w-7xl mx-auto mt-28 px-5 text-white color-898989">
-                <div class="py-7 text-sm text-center text-white opacity-80">© 2022 GASH POINT Co., Ltd. All right
+                <div class="py-7 text-sm text-center text-white opacity-80">© 2023 GASH POINT Co., Ltd. All right
                     reserved</div>
             </div>
         </div>
