@@ -482,7 +482,7 @@ body {
 .custom-card > div:nth-child(2n) {
   background-color: #6319c2;
 }
-.custom-card > div:nth-child(2n) > div:first-child:after {
+.custom-card > div:nth-child(2n):after {
   background-color: #34076f;
 }
 .custom-card > div:first-child:after {

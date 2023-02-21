@@ -615,12 +615,8 @@ body {
         &:nth-child(2n) {
             background-color: #6319c2;
 
-            >div {
-                &:first-child {
-                    &:after {
-                        background-color: #34076f;
-                    }
-                }
+            &:after {
+                background-color: #34076f;
             }
         }
 
