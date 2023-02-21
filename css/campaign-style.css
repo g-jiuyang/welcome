@@ -435,16 +435,16 @@ body {
   }
 }
 .card-bg {
-  background-image: url(../images/card-bg.png);
+  background-image: url(../images/card-bg_m.png);
   background-repeat: no-repeat;
-  background-size: 400%;
-  background-position: top right 20%;
+  background-position: center;
+  background-size: cover;
 }
 
 .custom-card {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 12px;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -453,7 +453,7 @@ body {
   text-align: left;
   color: white;
   border-radius: 16px;
-  padding: 20px 14px;
+  padding: 32px 14px;
   background-color: #34076f;
   display: flex;
 }
@@ -562,8 +562,10 @@ body {
     width: 469px;
   }
   .card-bg {
-    background-position: center;
-    background-size: cover;
+    background-image: url(../images/card-bg.png);
+  }
+  .custom-card {
+    gap: 0 24px;
   }
   .custom-card > div {
     max-width: calc(50% - 12px);
@@ -587,6 +589,9 @@ body {
   }
   .custom-card > div:nth-child(4n+2):after, .custom-card > div:nth-child(4n+3):after {
     background-color: #34076f;
+  }
+  .custom-card > div:nth-child(4n+3) {
+    margin-top: -12px;
   }
 }
 @media screen and (min-width: 1024px) {

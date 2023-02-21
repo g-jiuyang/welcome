@@ -563,16 +563,16 @@ body {
 }
 
 .card-bg {
-    background-image: url(../images/card-bg.png);
+    background-image: url(../images/card-bg_m.png);
     background-repeat: no-repeat;
-    background-size: 400%;
-    background-position: top right 20%;
+    background-position: center;
+    background-size: cover;
 }
 
 .custom-card {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 12px;
     justify-content: space-between;
     align-items: flex-start;
 
@@ -581,7 +581,7 @@ body {
         text-align: left;
         color: white;
         border-radius: 16px;
-        padding: 20px 14px;
+        padding: 32px 14px;
         background-color: #34076f;
         display: flex;
 
@@ -725,11 +725,12 @@ body {
     }
 
     .card-bg {
-        background-position: center;
-        background-size: cover;
+        background-image: url(../images/card-bg.png);
     }
 
     .custom-card {
+        gap: 0 24px;
+
         >div {
             max-width: calc(50% - 12px);
             padding: 24px;
@@ -760,6 +761,10 @@ body {
                 &:after {
                     background-color: #34076f;
                 }
+            }
+
+            &:nth-child(4n+3) {
+                margin-top: -12px;
             }
         }
     }
